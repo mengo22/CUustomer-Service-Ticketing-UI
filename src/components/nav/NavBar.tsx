@@ -1,48 +1,43 @@
 
 
-import { NavLink } from "react-router"
-
+ import { NavLink } from "react-router"
+import { FaToolbox } from "react-icons/fa";
 
 export const NavBar = () => {
   return (
     
-<div className="navbar bg-base-100 shadow-sm width-full">
-  {/* LEFT: Hamburger menu for mobile */}
-  <div className="flex-none lg:hidden">
-    <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </label>
-  </div>
+<div>
 
-  {/* CENTER: Logo */}
-  <div className="flex-1">
-    <a className="btn btn-ghost text-xl">Quick Fix</a>
-  </div>
-
-  {/* RIGHT: Desktop Menu */}
-  <div className="flex-none hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-
+ 
+<header className="text-white body-font bg-blue-400">
+  <div className=" flex justify-betweencontainer ml-2 mr-2 p-4 flex-col md:flex-row items-center ">
+    <div className="flex justify-start">
+     
+    <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+      <FaToolbox />
+    
+      <span className="ml-3 text-3xl font-bold">Quick Fix</span>
+    </a>
+    
+    </div>
+    
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+     
       
-      <li><a href="/contact">Contact Us</a></li>
-
-      {/* Dropdown example */}
-      <li>
-        <details>
-          <summary>Account</summary>
-          <ul className="p-2 bg-base-100 rounded-t-none">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
-          </ul>
-        </details>
-      </li>
-
-    </ul>
+       <a className="mr-5 hover:text-gray-900"><NavLink to="/">Home</NavLink></a>
+      <a className="mr-5 hover:text-gray-900"><NavLink to="/about">About</NavLink></a>
+      <a className="mr-5 hover:text-gray-900"><NavLink to="/contact">Contact Us</NavLink></a>
+      <a className="mr-5 hover:text-gray-900"><NavLink to="/dashboard">Dashboard</NavLink></a>
+    </nav>
+    <div className="flex justify-end-safe">
+    {/* <button className="flex text-blue-400 bg-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0 "><a className="mr-5 hover:text-gray-900"><NavLink to="/register">Register</NavLink></a> */}
+    <a className="mr-5 hover:text-gray-900"><NavLink to="/login">Login</NavLink></a>
+    <a className="mr-5 hover:text-gray-900"><NavLink to="/register">Register</NavLink></a>
+   
+    {/* </button> */}
+    </div>
   </div>
+</header>
 </div>
 
 
