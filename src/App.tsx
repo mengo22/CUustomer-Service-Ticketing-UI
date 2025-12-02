@@ -8,7 +8,8 @@ import { ContactUs } from './components/ContactUs'
 import { Register } from './components/authorisation/Register'
 import { Error } from './components/Error'
 import { Login } from './components/authorisation/Login'
-import { Verification } from './components/authorisation/Verification'
+
+// import { Verification } from './components/authorisation/Verification'
 function App() {
   const router = createBrowserRouter([
     {
@@ -39,13 +40,13 @@ function App() {
      {
       path:'\login',
       element: <Login/>
-    
-    },
-{
-      path:'\Verify',
-      element: <Verification/>
-    
+  
     }
+// {
+//       path:'\Verify',
+//       element: <Verification/>
+    
+//     }
 
 ])
 
